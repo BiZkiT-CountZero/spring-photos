@@ -13,18 +13,21 @@
 
 ##Adding new photo
 
+![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-9.png)
+---
+![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-10.png)
+---
+![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-11.png)
+---
+
+##Zipping few files
+
 ![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-5.png)
 ---
 ![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-6.png)
 ---
 ![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-7.png)
 ---
-
-##Zipping few files
-
 ![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-8.png)
 ---
-![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-9.png)
----
-![alt tag](https://github.com/Raveleen/spring-photos/blob/master/example-10.png)
----
+
