@@ -21,7 +21,7 @@ import javax.persistence.Persistence;
 @Configuration
 @ComponentScan(value = "com.raveleen")
 @EnableWebMvc
-public class WebAppConfig extends WebMvcConfigurerAdapter{
+public class WebAppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public EntityManager entityManager() {
         EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("MenuJPA");
