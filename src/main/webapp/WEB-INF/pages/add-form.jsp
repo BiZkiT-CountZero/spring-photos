@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Menu</title>
+    <title>Photos</title>
 
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/resources/style.css"/>" rel="stylesheet">
@@ -18,7 +18,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">Menu</a>
+            <a class="navbar-brand" href="/">Photos</a>
         </div>
     </div>
 </nav>
@@ -27,38 +27,21 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><a href="/">Menu</a></li>
-                <li><a href="/discount">Dishes with discount</a></li>
-                <li><a href="/portion">Portion of dishes under 1kg</a></li>
-                <li><a href="#input_price" data-toggle="collapse">Dishes within price range</a>
-                    <div id="input_price" class="collapse">
-                        <form action="/price" method="get">
-                            <div class="input-group-sm">
-                                <input type="text" pattern="[1-9]{1}[0-9]{,6}" class="form-control" name="min_price"
-                                       placeholder="Minimal price"><br>
-                                <input type="text" pattern="[1-9]{1}[0-9]{,6}" class="form-control" name="max_price"
-                                       placeholder="Maximal price"><br>
-                                <button type="submit" class="btn btn-sm btn-success">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-                <li><a href="/add-form">Add dish to menu</a></li>
+                <li><a href="/">Photos</a></li>
+                <li><a href="/add-form">Add photo</a></li>
+                <li><a href="/zipper">Zipper</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <form action="/add" method="post">
-                <div class="input-group-sm">
-                    <input type="text" pattern="^[A-Za-z\s]+$" class="form-control" name="name"
-                           placeholder="Name"><br>
-                    <input type="text" pattern="[1-9]{1}[0-9]{,6}" class="form-control" name="weight"
-                           placeholder="Weight"><br>
-                    <input type="text" pattern="[1-9]{1}[0-9]{,6}" class="form-control" name="price"
-                           placeholder="Price"><br>
-                    <input type="text" pattern="[0-9]{1,2}" class="form-control" name="discount" placeholder="Discount"><br>
-                    <button type="submit" class="btn btn-sm btn-success">Add</button>
-                </div>
-            </form>
+            <div class="jumbotron">
+                <form enctype="multipart/form-data" class="form-horizontal" action="/add" method="post">
+                    <h3>New photo</h3>
+                    <br>
+                    <input type="file" name="photo">
+                    <br>
+                    <input type="submit" class="btn btn-primary" value="Add">
+                </form>
+            </div>
         </div>
     </div>
 </div>

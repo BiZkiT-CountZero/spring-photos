@@ -24,13 +24,18 @@ import javax.persistence.Persistence;
 public class WebAppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public EntityManager entityManager() {
-        EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("MenuJPA");
+        EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("SpringJPA");
         return managerFactory.createEntityManager();
     }
 
     @Bean
-    public DishDAO dishDAO() {
-        return new DishDAO();
+    public PhotoDAO photoDAO() {
+        return new PhotoDAO();
+    }
+
+    @Bean
+    public Archive archive() {
+        return new Archive();
     }
 
     @Bean
@@ -43,9 +48,11 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         return resolver;
     }
 
-    @Bean
+    @Bean(name = "multipartResolver")
     public CommonsMultipartResolver setMultipartResolver() {
-        return new CommonsMultipartResolver();
+        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
+        commonsMultipartResolver.setMaxUploadSize(65000);
+        return commonsMultipartResolver;
     }
 
     @Override
